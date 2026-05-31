@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-forest-950: #071B16;
+    --color-forest-900: #0B2A22;
+    --color-forest-800: #12382E;
+    --color-forest-700: #1E4D3E;
+    --color-moss-500: #6F8F4E;
+    --color-gold-500: #D6A84F;
+    --color-gold-400: #E9C46A;
+    --color-sand-100: #F5EFE3;
+    --color-sand-200: #E8DDC8;
+    --color-parchment: #FBF6EA;
+    --color-ink: #17211D;
+    --color-muted: #6D746F;
+    --color-danger: #B85C38;
+    --color-success: #2F7D55;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-parchment text-ink font-sans antialiased;
+    min-height: 100dvh;
+  }
+
+  /* Thai typography: never letter-space negative, line-height >= 1.5 (RULE-008) */
+  :lang(th) {
+    letter-spacing: 0;
+    line-height: 1.6;
+  }
+
+  /* Prefers reduced motion (DS-MOTION) */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  .bg-card {
+    background-color: rgba(255, 250, 240, 0.92);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* DS-MOTION: hero section fade-in (TASK-025) */
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0);    }
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 0.5s ease-out both;
+  }
+
+  /* DS-MOTION: staggered fade-in for dashboard cards */
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0);    }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.45s ease-out both;
+  }
+  .animate-delay-75  { animation-delay: 75ms;  }
+  .animate-delay-150 { animation-delay: 150ms; }
+  .animate-delay-225 { animation-delay: 225ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-375 { animation-delay: 375ms; }
+  .animate-delay-450 { animation-delay: 450ms; }
+  .animate-delay-525 { animation-delay: 525ms; }
+  .animate-delay-600 { animation-delay: 600ms; }
+
+  /* DS-MOTION: slide-in from right for right-column panels */
+  @keyframes slide-in-right {
+    from { opacity: 0; transform: translateX(20px); }
+    to   { opacity: 1; transform: translateX(0);    }
+  }
+  .animate-slide-in-right {
+    animation: slide-in-right 0.45s ease-out both;
+  }
+
+  /* DS-MOTION: scale-in for chart / table containers */
+  @keyframes scale-in {
+    from { opacity: 0; transform: scale(0.97); }
+    to   { opacity: 1; transform: scale(1);    }
+  }
+  .animate-scale-in {
+    animation: scale-in 0.4s ease-out both;
+  }
+
+  /* DS-MOTION: ProgressBar width transition is handled inline via transition-all */
+  /* DS-MOTION: card hover lift is handled via Tailwind hover:-translate-y-1 */
+}

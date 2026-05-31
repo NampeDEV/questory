@@ -1,0 +1,19 @@
+{
+  "name": "questory",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=20.11 <21",
+    "pnpm": ">=9"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @questory/web dev",
+    "build": "pnpm --filter @questory/web build",
+    "start": "pnpm --filter @questory/web start",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm --filter @questory/web test",
+    "test:e2e": "pnpm --filter @questory/web test:e2e",
+    "format": "pnpm -r format"
+  }
+}

@@ -1,0 +1,9 @@
+// Base tsconfig — see packages/config/typescript/base.json for the real base config.
+// This file exists so editors can resolve workspace-level TypeScript settings.
+{
+  "files": [],
+  "references": [
+    { "path": "apps/web" },
+    { "path": "packages/types" }
+  ]
+}

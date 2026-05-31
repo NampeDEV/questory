@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/consistent-type-imports": "error",
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "react/self-closing-comp": "error",
+    "no-restricted-imports": ["error", {
+      "patterns": [{
+        "group": ["@/data/*"],
+        "message": "Import mock data through src/lib/api/* facade only."
+      }]
+    }]
+  },
+  "overrides": [
+    {
+      "files": ["src/lib/api/**/*.ts", "src/data/**/*.ts"],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ]
+}

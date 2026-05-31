@@ -1,0 +1,33 @@
+{
+  "name": "Questory",
+  "short_name": "Questory",
+  "description": "ออกเดินทาง เก็บภารกิจ สร้างความทรงจำ และสะสม Pin จากอุทยานไทย",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5EFE0",
+  "theme_color": "#1E4D3E",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/hero/hero-main.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "label": "Questory — Quest Board"
+    }
+  ],
+  "categories": ["travel", "sports", "lifestyle"]
+}

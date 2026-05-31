@@ -1,0 +1,20 @@
+node_modules/
+# Next.js build output
+apps/web/.next/
+apps/web/out/
+# Vercel
+.vercel/
+# Env files
+.env.local
+.env.*.local
+# Logs
+*.log
+# OS
+.DS_Store
+Thumbs.db
+# pnpm
+.pnpm-store/
+# Test artifacts
+apps/web/test-results/
+# TypeScript incremental build
+*.tsbuildinfo
